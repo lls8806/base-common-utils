@@ -1,0 +1,7 @@
+server:
+  port: 8899
+spring:
+  application:
+    name: base-common-util
+  main:
+    allow-bean-definition-overriding: true #当遇到相同名字时，是否允许覆盖注册
