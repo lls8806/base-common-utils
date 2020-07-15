@@ -114,7 +114,6 @@ public class ExcelExportUtils {
         TemplateExportParams params = new TemplateExportParams(path);
         //设置导出样式
         params.setStyle(ExcelStyle.class);
-        //设置第二行为空
         //输出Workbook流
         return ExcelExportUtil.exportExcel(params, map);
     }

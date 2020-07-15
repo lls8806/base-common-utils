@@ -35,7 +35,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!--lombok-->
+        <!--lombok idea需要添加lombok插件-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
