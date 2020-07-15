@@ -21,6 +21,10 @@
         <swagger2.version>2.7.0</swagger2.version>
         <easypoi-spring-boot-starter.version>4.0.0</easypoi-spring-boot-starter.version>
         <fastjson.version>1.2.68</fastjson.version>
+        <commons-lang3.version>3.6</commons-lang3.version>
+        <csv.version>2.0</csv.version>
+        <javax-mail.version>1.6.0</javax-mail.version>
+        <httpmime.version>4.4.1</httpmime.version>
     </properties>
 
     <dependencies>
@@ -63,14 +67,43 @@
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
         </dependency>
+        <!--langs-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+        <!--- csv -->
+        <dependency>
+            <groupId>net.sourceforge.javacsv</groupId>
+            <artifactId>javacsv</artifactId>
+            <version>${csv.version}</version>
+        </dependency>
+        <!--邮件-->
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>${javax-mail.version}</version>
+        </dependency>
+        <!-- http相关 -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>${httpmime.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>
