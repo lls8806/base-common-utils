@@ -12,7 +12,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigDecimal;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -71,5 +74,14 @@ public class ExcelServiceImpl implements ExcelService {
         Workbook wb = ExcelExportUtils.getWorkbook("导出测试", "", UserVo.class, list);
         ExcelExportUtils.exportExcel(wb,"导出测试",response);
         return "导出成功";
+    }
+
+    @Override
+    public String uploadByUrl(String urlPath) throws IOException {
+        URL url = new URL(urlPath);
+        InputStream inputStream = url.openConnection().getInputStream();
+        List<UserVo> list = ExcelImportUtils.importExcel(inputStream, 1, 1, false, UserVo.class);
+        list.forEach(System.out::println);
+        return "上传成功";
     }
 }

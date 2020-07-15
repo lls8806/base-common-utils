@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.text.ParseException;
 
 /**
@@ -27,6 +28,13 @@ public class ExcelController {
     @PostMapping("/uploadByFile")
     public String uploadByFile(@RequestParam("file")MultipartFile file) throws IOException {
         return excelService.uploadByFile(file);
+    }
+
+
+    @ApiOperation("从url中读取excel上传")
+    @PostMapping("/uploadByUrl")
+    public String uploadByUrl(@RequestParam("urlPath")String urlPath) throws IOException {
+        return excelService.uploadByUrl(urlPath);
     }
 
     @ApiOperation("excel导出")

@@ -21,7 +21,7 @@ public class UserVo {
     @Excel(name = "年龄",orderNum = "3",width = 10)
     private Integer age;
 
-    @Excel(name = "出生日期",orderNum = "4",exportFormat="yyyy-MM-dd",width = 10)
+    @Excel(name = "出生日期",orderNum = "4",importFormat = "yyyy-MM-dd",exportFormat="yyyy-MM-dd",width = 10)
     private Date birthday;
 
     @Excel(name="现金",orderNum = "5",numFormat = "0.00",width = 10)

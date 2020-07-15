@@ -4,6 +4,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.text.ParseException;
 
 /**
@@ -23,4 +24,10 @@ public interface ExcelService {
      * @return
      */
     String export(HttpServletResponse response) throws ParseException;
+
+    /**根据url读取excel并上传
+     * @param urlPath url地址
+     * @return
+     */
+    String uploadByUrl(String urlPath) throws IOException;
 }
