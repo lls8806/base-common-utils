@@ -20,7 +20,7 @@
         <skipTests>true</skipTests>
         <swagger2.version>2.7.0</swagger2.version>
         <easypoi-spring-boot-starter.version>4.0.0</easypoi-spring-boot-starter.version>
-        <fastjson.version>1.2.68</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <commons-lang3.version>3.6</commons-lang3.version>
         <csv.version>2.0</csv.version>
         <javax-mail.version>1.6.0</javax-mail.version>
